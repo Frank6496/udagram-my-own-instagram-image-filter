@@ -35,7 +35,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
     return url.test(URL);
   }
 
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req: string, res: string) => {
     // Validating the image_url query
     var image_url = req.query.image_url;
     var is_a_valid_url = urlValidation(image_url);
